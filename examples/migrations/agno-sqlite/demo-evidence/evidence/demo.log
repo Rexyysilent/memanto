@@ -1,0 +1,140 @@
+ Container earning-memanto-cli-run-5f43a96894bf Creating 
+ Container earning-memanto-cli-run-5f43a96894bf Created 
+Agno question: When should the weekly report be delivered?
+Agno answer: The weekly report should be delivered on Friday at 16:00 UTC.
+Agno question: What file formats should the report use?
+Agno answer: The report should be sent as a Markdown file with a CSV attachment.
+Agno question: What timezone does the project display?
+Agno answer: The project displays times in Asia/Kolkata.
+Agno question: What primary database does the project use?
+Agno answer: The project stores its primary data in PostgreSQL 16.
+Agno persisted 4 current memories; the schedule correction replaced its old value.
+{
+  "source": "Agno SQLite",
+  "records": 4,
+  "mapped_memories": 4,
+  "types": {
+    "context": 4
+  },
+  "body_preserved_by_memanto_mapper": true,
+  "live_import_verified": false,
+  "savings_report": "Not supplied by memanto migrate okf"
+}
+
+Readable OKF sample from the source database:
+---
+type: context
+title: Agno memory 0a9206a6e8cafe4a
+tags:
+- locale
+x_memanto:
+  source: agno
+  provenance: imported
+  updated_at: '2026-09-08T08:06:42+00:00'
+timestamp: '2026-09-08T08:06:42+00:00'
+---
+
+## Memory
+
+The project displays times in Asia/Kolkata and uses INR.
+
+## Agno source metadata
+
+{
+  "agent_id": "report-assistant",
+  "created_at": 1788854802,
+  "feedback": null,
+  "input": null,
+  "memory_id": "locale",
+  "team_id": null,
+  "topics": [
+    "locale"
+  ],
+  "updated_at": 1788854802,
+  "user_id": "demo-user"
+}
+
+
+$ memanto agent create agno-demo-7981da8f3764 --pattern tool
+[OK] Namespace created in Moorcheh: memanto_agent_agno-demo-7981da8f3764
+Agent 'agno-demo-7981da8f3764' created successfully!
+Pattern: tool
+Agent activated automatically.
+Activation expires: 2026-09-08T14:06:55.279216+00:00
+You can now run: memanto remember "..." and memanto recall "..."
+
+Before migration: the new Memanto agent has no answer-bearing memories.
+
+$ memanto migrate okf /run-artifacts/7981da8f3764/input-okf --dry-run
+╭─────────────────────────╮
+│ OKF -> Memanto  Dry run │
+╰─────────────────────────╯
+  … Loading OKF bundle from /run-artifacts/7981da8f3764/input-okf
+  … Mapping OKF nodes onto Memanto schema...
+
+╭────────────────────────────── Dry run complete ──────────────────────────────╮
+│ OKF nodes: 4                                                                 │
+│ Mapped memories: 4  (skipped 0)                                              │
+│ Type breakdown: context: 4                                                   │
+│                                                                              │
+│ Dry run — no writes performed.                                               │
+│                                                                              │
+│ Run dir: /root/.memanto/migrate/okf/20260908_080655                          │
+│ Mapped preview:                                                              │
+│ /root/.memanto/migrate/okf/20260908_080655/mapped_preview.json               │
+╰──────────────────────────────────────────────────────────────────────────────╯
+
+
+$ memanto migrate okf /run-artifacts/7981da8f3764/input-okf --agent agno-demo-7981da8f3764
+╭─────────────────────────╮
+│ OKF -> Memanto  Migrate │
+╰─────────────────────────╯
+  … Loading OKF bundle from /run-artifacts/7981da8f3764/input-okf
+  … Mapping OKF nodes onto Memanto schema...
+  … Importing batch 1/1 (4 memories)...
+
+╭────────────────────────────── Import complete ───────────────────────────────╮
+│ OKF nodes: 4                                                                 │
+│ Mapped memories: 4  (skipped 0)                                              │
+│ Type breakdown: context: 4                                                   │
+│ Imported: 4  Failed: 0  Batches: 1                                           │
+│ Target agent: agno-demo-7981da8f3764                                         │
+│                                                                              │
+│ Run dir: /root/.memanto/migrate/okf/20260908_080656                          │
+│ Mapped preview:                                                              │
+│ /root/.memanto/migrate/okf/20260908_080656/mapped_preview.json               │
+╰──────────────────────────────────────────────────────────────────────────────╯
+
+Memanto question: When should the weekly report be delivered?
+Memanto answer: The weekly report should be delivered on Friday at 16:00 UTC.
+Memanto question: What file formats should the report use?
+Memanto answer: The report should use Markdown and a CSV attachment.
+Memanto question: What timezone does the project display?
+Memanto answer: Asia/Kolkata.
+Memanto question: What primary database does the project use?
+Memanto answer: The project stores its primary data in PostgreSQL 16.
+{"question": "When should the weekly report be delivered?", "expected": "Friday at 16:00 UTC", "source_contains_answer": true, "destination_retrieved_answer": true, "recall_seconds": 0.04102210400014883}
+{"question": "What file formats should the report use?", "expected": "Markdown", "source_contains_answer": true, "destination_retrieved_answer": true, "recall_seconds": 0.04352321899932576}
+{"question": "What timezone does the project display?", "expected": "Asia/Kolkata", "source_contains_answer": true, "destination_retrieved_answer": true, "recall_seconds": 0.02283085900126025}
+{"question": "What primary database does the project use?", "expected": "PostgreSQL 16", "source_contains_answer": true, "destination_retrieved_answer": true, "recall_seconds": 0.03052471600130957}
+
+$ memanto memory export --okf --split file --agent agno-demo-7981da8f3764 --output /root/.memanto/on-prem/export-7981da8f3764 --limit 100
+╭───────────────────────────────────────────────────────────────────╮
+│ OKF Export                                                        │
+│ Agent: agno-demo-7981da8f3764  •  Split: file  •  Limit: 100/type │
+╰───────────────────────────────────────────────────────────────────╯
+
+ OKF Bundle Counts 
+┏━━━━━━━━━┳━━━━━━━┓
+┃ Type    ┃ Count ┃
+┡━━━━━━━━━╇━━━━━━━┩
+│ Context │     4 │
+└─────────┴───────┘
+
+OK Exported 4 memories to OKF bundle!
+Bundle: /root/.memanto/on-prem/export-7981da8f3764
+Completed in 0.21s
+
+Generated answers: 4/4 pass before and after. Round trip: 4 complete memory bodies preserved.
+The upstream OKF CLI has no savings report or --report option
+Live import, recall, and OKF export checks passed. Artifacts: /run-artifacts/7981da8f3764
