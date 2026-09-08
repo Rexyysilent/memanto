@@ -1,0 +1,436 @@
+{
+  "source": "Agno 3.0.6 SQLite persistence API",
+  "scenario": "Scripted demonstration, not a historical personal archive",
+  "golden_check": "Answer-bearing retrieval at k=3, not generated-answer quality",
+  "questions": [
+    {
+      "question": "When should the weekly report be delivered?",
+      "expected": "Friday at 16:00 UTC",
+      "source_contains_answer": true,
+      "destination_retrieved_answer": true,
+      "recall_seconds": 0.04102210400014883,
+      "response": {
+        "agent_id": "agno-demo-7981da8f3764",
+        "query": "When should the weekly report be delivered?",
+        "memories": [
+          {
+            "id": "dc7f629c-8b69-46fa-b74e-d32d1e6ae7c5",
+            "title": "Agno memory 12a91a2c4e9f3bc2",
+            "content": "## Memory\n\nCorrection: deliver the weekly report on Friday at 16:00 UTC.\n\n## Agno source metadata\n\n{\n  \"agent_id\": \"report-assistant\",\n  \"created_at\": 1788854802,\n  \"feedback\": null,\n  \"input\": \"Move Monday delivery to Friday afternoon.\",\n  \"memory_id\": \"delivery\",\n  \"team_id\": null,\n  \"topics\": [\n    \"schedule\"\n  ],\n  \"updated_at\": 1788854802,\n  \"user_id\": \"demo-user\"\n}\n\n---\n[Supporting data]\n- OKF source: memories/12a91a2c4e9f3bc2db758f3ba88734553647a4d2c916ca78a208d984b839e28d.md",
+            "text": "[CONTEXT] Agno memory 12a91a2c4e9f3bc2\n\n## Memory\n\nCorrection: deliver the weekly report on Friday at 16:00 UTC.\n\n## Agno source metadata\n\n{\n  \"agent_id\": \"report-assistant\",\n  \"created_at\": 1788854802,\n  \"feedback\": null,\n  \"input\": \"Move Monday delivery to Friday afternoon.\",\n  \"memory_id\": \"delivery\",\n  \"team_id\": null,\n  \"topics\": [\n    \"schedule\"\n  ],\n  \"updated_at\": 1788854802,\n  \"user_id\": \"demo-user\"\n}\n\n---\n[Supporting data]\n- OKF source: memories/12a91a2c4e9f3bc2db758f3ba88734553647a4d2c916ca78a208d984b839e28d.md\n\nTags: schedule",
+            "type": "context",
+            "confidence": 0.8,
+            "status": "active",
+            "tags": [
+              "schedule"
+            ],
+            "created_at": "2026-09-08T08:06:42+00:00",
+            "updated_at": "2026-09-08T08:06:42+00:00",
+            "expired_at": null,
+            "expired_by": null,
+            "actor_id": "agno-demo-7981da8f3764",
+            "source": "agno",
+            "source_ref": null,
+            "agent_id": "agno-demo-7981da8f3764",
+            "score": 0.35009,
+            "provenance": "imported",
+            "namespace": "memanto_agent_agno-demo-7981da8f3764",
+            "label": "Good Relevance"
+          },
+          {
+            "id": "a8dbcfe1-c3be-41df-80f8-38d11b434448",
+            "title": "Agno memory dbb3270b08292b70",
+            "content": "## Memory\n\nSend reports as Markdown, with a CSV attachment.\n\n## Agno source metadata\n\n{\n  \"agent_id\": \"report-assistant\",\n  \"created_at\": 1788854802,\n  \"feedback\": null,\n  \"input\": null,\n  \"memory_id\": \"format\",\n  \"team_id\": null,\n  \"topics\": [\n    \"format\"\n  ],\n  \"updated_at\": 1788854802,\n  \"user_id\": \"demo-user\"\n}\n\n---\n[Supporting data]\n- OKF source: memories/dbb3270b08292b7017ddd702ed08a11c5345eb635c6a3d2494952da5fa328379.md",
+            "text": "[CONTEXT] Agno memory dbb3270b08292b70\n\n## Memory\n\nSend reports as Markdown, with a CSV attachment.\n\n## Agno source metadata\n\n{\n  \"agent_id\": \"report-assistant\",\n  \"created_at\": 1788854802,\n  \"feedback\": null,\n  \"input\": null,\n  \"memory_id\": \"format\",\n  \"team_id\": null,\n  \"topics\": [\n    \"format\"\n  ],\n  \"updated_at\": 1788854802,\n  \"user_id\": \"demo-user\"\n}\n\n---\n[Supporting data]\n- OKF source: memories/dbb3270b08292b7017ddd702ed08a11c5345eb635c6a3d2494952da5fa328379.md\n\nTags: format",
+            "type": "context",
+            "confidence": 0.8,
+            "status": "active",
+            "tags": [
+              "format"
+            ],
+            "created_at": "2026-09-08T08:06:42+00:00",
+            "updated_at": "2026-09-08T08:06:42+00:00",
+            "expired_at": null,
+            "expired_by": null,
+            "actor_id": "agno-demo-7981da8f3764",
+            "source": "agno",
+            "source_ref": null,
+            "agent_id": "agno-demo-7981da8f3764",
+            "score": 0.276738,
+            "provenance": "imported",
+            "namespace": "memanto_agent_agno-demo-7981da8f3764",
+            "label": "Low Relevance"
+          },
+          {
+            "id": "b0a7a5ce-1091-482d-8f03-cf873dbf7a6d",
+            "title": "Agno memory d89685daf5d1fb75",
+            "content": "## Memory\n\nThe project stores its primary data in PostgreSQL 16.\n\n## Agno source metadata\n\n{\n  \"agent_id\": \"report-assistant\",\n  \"created_at\": 1788854802,\n  \"feedback\": null,\n  \"input\": null,\n  \"memory_id\": \"storage\",\n  \"team_id\": null,\n  \"topics\": [\n    \"database\"\n  ],\n  \"updated_at\": 1788854802,\n  \"user_id\": \"demo-user\"\n}\n\n---\n[Supporting data]\n- OKF source: memories/d89685daf5d1fb753543e93d7afff013c66e636b1d54f3eb86bf7bd18a7812b2.md",
+            "text": "[CONTEXT] Agno memory d89685daf5d1fb75\n\n## Memory\n\nThe project stores its primary data in PostgreSQL 16.\n\n## Agno source metadata\n\n{\n  \"agent_id\": \"report-assistant\",\n  \"created_at\": 1788854802,\n  \"feedback\": null,\n  \"input\": null,\n  \"memory_id\": \"storage\",\n  \"team_id\": null,\n  \"topics\": [\n    \"database\"\n  ],\n  \"updated_at\": 1788854802,\n  \"user_id\": \"demo-user\"\n}\n\n---\n[Supporting data]\n- OKF source: memories/d89685daf5d1fb753543e93d7afff013c66e636b1d54f3eb86bf7bd18a7812b2.md\n\nTags: database",
+            "type": "context",
+            "confidence": 0.8,
+            "status": "active",
+            "tags": [
+              "database"
+            ],
+            "created_at": "2026-09-08T08:06:42+00:00",
+            "updated_at": "2026-09-08T08:06:42+00:00",
+            "expired_at": null,
+            "expired_by": null,
+            "actor_id": "agno-demo-7981da8f3764",
+            "source": "agno",
+            "source_ref": null,
+            "agent_id": "agno-demo-7981da8f3764",
+            "score": 0.235979,
+            "provenance": "imported",
+            "namespace": "memanto_agent_agno-demo-7981da8f3764",
+            "label": "Low Relevance"
+          }
+        ],
+        "count": 3
+      }
+    },
+    {
+      "question": "What file formats should the report use?",
+      "expected": "Markdown",
+      "source_contains_answer": true,
+      "destination_retrieved_answer": true,
+      "recall_seconds": 0.04352321899932576,
+      "response": {
+        "agent_id": "agno-demo-7981da8f3764",
+        "query": "What file formats should the report use?",
+        "memories": [
+          {
+            "id": "a8dbcfe1-c3be-41df-80f8-38d11b434448",
+            "title": "Agno memory dbb3270b08292b70",
+            "content": "## Memory\n\nSend reports as Markdown, with a CSV attachment.\n\n## Agno source metadata\n\n{\n  \"agent_id\": \"report-assistant\",\n  \"created_at\": 1788854802,\n  \"feedback\": null,\n  \"input\": null,\n  \"memory_id\": \"format\",\n  \"team_id\": null,\n  \"topics\": [\n    \"format\"\n  ],\n  \"updated_at\": 1788854802,\n  \"user_id\": \"demo-user\"\n}\n\n---\n[Supporting data]\n- OKF source: memories/dbb3270b08292b7017ddd702ed08a11c5345eb635c6a3d2494952da5fa328379.md",
+            "text": "[CONTEXT] Agno memory dbb3270b08292b70\n\n## Memory\n\nSend reports as Markdown, with a CSV attachment.\n\n## Agno source metadata\n\n{\n  \"agent_id\": \"report-assistant\",\n  \"created_at\": 1788854802,\n  \"feedback\": null,\n  \"input\": null,\n  \"memory_id\": \"format\",\n  \"team_id\": null,\n  \"topics\": [\n    \"format\"\n  ],\n  \"updated_at\": 1788854802,\n  \"user_id\": \"demo-user\"\n}\n\n---\n[Supporting data]\n- OKF source: memories/dbb3270b08292b7017ddd702ed08a11c5345eb635c6a3d2494952da5fa328379.md\n\nTags: format",
+            "type": "context",
+            "confidence": 0.8,
+            "status": "active",
+            "tags": [
+              "format"
+            ],
+            "created_at": "2026-09-08T08:06:42+00:00",
+            "updated_at": "2026-09-08T08:06:42+00:00",
+            "expired_at": null,
+            "expired_by": null,
+            "actor_id": "agno-demo-7981da8f3764",
+            "source": "agno",
+            "source_ref": null,
+            "agent_id": "agno-demo-7981da8f3764",
+            "score": 0.377957,
+            "provenance": "imported",
+            "namespace": "memanto_agent_agno-demo-7981da8f3764",
+            "label": "Good Relevance"
+          },
+          {
+            "id": "1f92e427-ef56-4b4f-9000-fbbc24ed3b5c",
+            "title": "Agno memory 0a9206a6e8cafe4a",
+            "content": "## Memory\n\nThe project displays times in Asia/Kolkata and uses INR.\n\n## Agno source metadata\n\n{\n  \"agent_id\": \"report-assistant\",\n  \"created_at\": 1788854802,\n  \"feedback\": null,\n  \"input\": null,\n  \"memory_id\": \"locale\",\n  \"team_id\": null,\n  \"topics\": [\n    \"locale\"\n  ],\n  \"updated_at\": 1788854802,\n  \"user_id\": \"demo-user\"\n}\n\n---\n[Supporting data]\n- OKF source: memories/0a9206a6e8cafe4a58359fd612fa5b4a3fec5dbd98afd13fdaec85eb6e55b656.md",
+            "text": "[CONTEXT] Agno memory 0a9206a6e8cafe4a\n\n## Memory\n\nThe project displays times in Asia/Kolkata and uses INR.\n\n## Agno source metadata\n\n{\n  \"agent_id\": \"report-assistant\",\n  \"created_at\": 1788854802,\n  \"feedback\": null,\n  \"input\": null,\n  \"memory_id\": \"locale\",\n  \"team_id\": null,\n  \"topics\": [\n    \"locale\"\n  ],\n  \"updated_at\": 1788854802,\n  \"user_id\": \"demo-user\"\n}\n\n---\n[Supporting data]\n- OKF source: memories/0a9206a6e8cafe4a58359fd612fa5b4a3fec5dbd98afd13fdaec85eb6e55b656.md\n\nTags: locale",
+            "type": "context",
+            "confidence": 0.8,
+            "status": "active",
+            "tags": [
+              "locale"
+            ],
+            "created_at": "2026-09-08T08:06:42+00:00",
+            "updated_at": "2026-09-08T08:06:42+00:00",
+            "expired_at": null,
+            "expired_by": null,
+            "actor_id": "agno-demo-7981da8f3764",
+            "source": "agno",
+            "source_ref": null,
+            "agent_id": "agno-demo-7981da8f3764",
+            "score": 0.322431,
+            "provenance": "imported",
+            "namespace": "memanto_agent_agno-demo-7981da8f3764",
+            "label": "Good Relevance"
+          },
+          {
+            "id": "dc7f629c-8b69-46fa-b74e-d32d1e6ae7c5",
+            "title": "Agno memory 12a91a2c4e9f3bc2",
+            "content": "## Memory\n\nCorrection: deliver the weekly report on Friday at 16:00 UTC.\n\n## Agno source metadata\n\n{\n  \"agent_id\": \"report-assistant\",\n  \"created_at\": 1788854802,\n  \"feedback\": null,\n  \"input\": \"Move Monday delivery to Friday afternoon.\",\n  \"memory_id\": \"delivery\",\n  \"team_id\": null,\n  \"topics\": [\n    \"schedule\"\n  ],\n  \"updated_at\": 1788854802,\n  \"user_id\": \"demo-user\"\n}\n\n---\n[Supporting data]\n- OKF source: memories/12a91a2c4e9f3bc2db758f3ba88734553647a4d2c916ca78a208d984b839e28d.md",
+            "text": "[CONTEXT] Agno memory 12a91a2c4e9f3bc2\n\n## Memory\n\nCorrection: deliver the weekly report on Friday at 16:00 UTC.\n\n## Agno source metadata\n\n{\n  \"agent_id\": \"report-assistant\",\n  \"created_at\": 1788854802,\n  \"feedback\": null,\n  \"input\": \"Move Monday delivery to Friday afternoon.\",\n  \"memory_id\": \"delivery\",\n  \"team_id\": null,\n  \"topics\": [\n    \"schedule\"\n  ],\n  \"updated_at\": 1788854802,\n  \"user_id\": \"demo-user\"\n}\n\n---\n[Supporting data]\n- OKF source: memories/12a91a2c4e9f3bc2db758f3ba88734553647a4d2c916ca78a208d984b839e28d.md\n\nTags: schedule",
+            "type": "context",
+            "confidence": 0.8,
+            "status": "active",
+            "tags": [
+              "schedule"
+            ],
+            "created_at": "2026-09-08T08:06:42+00:00",
+            "updated_at": "2026-09-08T08:06:42+00:00",
+            "expired_at": null,
+            "expired_by": null,
+            "actor_id": "agno-demo-7981da8f3764",
+            "source": "agno",
+            "source_ref": null,
+            "agent_id": "agno-demo-7981da8f3764",
+            "score": 0.322431,
+            "provenance": "imported",
+            "namespace": "memanto_agent_agno-demo-7981da8f3764",
+            "label": "Good Relevance"
+          }
+        ],
+        "count": 3
+      }
+    },
+    {
+      "question": "What timezone does the project display?",
+      "expected": "Asia/Kolkata",
+      "source_contains_answer": true,
+      "destination_retrieved_answer": true,
+      "recall_seconds": 0.02283085900126025,
+      "response": {
+        "agent_id": "agno-demo-7981da8f3764",
+        "query": "What timezone does the project display?",
+        "memories": [
+          {
+            "id": "dc7f629c-8b69-46fa-b74e-d32d1e6ae7c5",
+            "title": "Agno memory 12a91a2c4e9f3bc2",
+            "content": "## Memory\n\nCorrection: deliver the weekly report on Friday at 16:00 UTC.\n\n## Agno source metadata\n\n{\n  \"agent_id\": \"report-assistant\",\n  \"created_at\": 1788854802,\n  \"feedback\": null,\n  \"input\": \"Move Monday delivery to Friday afternoon.\",\n  \"memory_id\": \"delivery\",\n  \"team_id\": null,\n  \"topics\": [\n    \"schedule\"\n  ],\n  \"updated_at\": 1788854802,\n  \"user_id\": \"demo-user\"\n}\n\n---\n[Supporting data]\n- OKF source: memories/12a91a2c4e9f3bc2db758f3ba88734553647a4d2c916ca78a208d984b839e28d.md",
+            "text": "[CONTEXT] Agno memory 12a91a2c4e9f3bc2\n\n## Memory\n\nCorrection: deliver the weekly report on Friday at 16:00 UTC.\n\n## Agno source metadata\n\n{\n  \"agent_id\": \"report-assistant\",\n  \"created_at\": 1788854802,\n  \"feedback\": null,\n  \"input\": \"Move Monday delivery to Friday afternoon.\",\n  \"memory_id\": \"delivery\",\n  \"team_id\": null,\n  \"topics\": [\n    \"schedule\"\n  ],\n  \"updated_at\": 1788854802,\n  \"user_id\": \"demo-user\"\n}\n\n---\n[Supporting data]\n- OKF source: memories/12a91a2c4e9f3bc2db758f3ba88734553647a4d2c916ca78a208d984b839e28d.md\n\nTags: schedule",
+            "type": "context",
+            "confidence": 0.8,
+            "status": "active",
+            "tags": [
+              "schedule"
+            ],
+            "created_at": "2026-09-08T08:06:42+00:00",
+            "updated_at": "2026-09-08T08:06:42+00:00",
+            "expired_at": null,
+            "expired_by": null,
+            "actor_id": "agno-demo-7981da8f3764",
+            "source": "agno",
+            "source_ref": null,
+            "agent_id": "agno-demo-7981da8f3764",
+            "score": 0.327027,
+            "provenance": "imported",
+            "namespace": "memanto_agent_agno-demo-7981da8f3764",
+            "label": "Good Relevance"
+          },
+          {
+            "id": "1f92e427-ef56-4b4f-9000-fbbc24ed3b5c",
+            "title": "Agno memory 0a9206a6e8cafe4a",
+            "content": "## Memory\n\nThe project displays times in Asia/Kolkata and uses INR.\n\n## Agno source metadata\n\n{\n  \"agent_id\": \"report-assistant\",\n  \"created_at\": 1788854802,\n  \"feedback\": null,\n  \"input\": null,\n  \"memory_id\": \"locale\",\n  \"team_id\": null,\n  \"topics\": [\n    \"locale\"\n  ],\n  \"updated_at\": 1788854802,\n  \"user_id\": \"demo-user\"\n}\n\n---\n[Supporting data]\n- OKF source: memories/0a9206a6e8cafe4a58359fd612fa5b4a3fec5dbd98afd13fdaec85eb6e55b656.md",
+            "text": "[CONTEXT] Agno memory 0a9206a6e8cafe4a\n\n## Memory\n\nThe project displays times in Asia/Kolkata and uses INR.\n\n## Agno source metadata\n\n{\n  \"agent_id\": \"report-assistant\",\n  \"created_at\": 1788854802,\n  \"feedback\": null,\n  \"input\": null,\n  \"memory_id\": \"locale\",\n  \"team_id\": null,\n  \"topics\": [\n    \"locale\"\n  ],\n  \"updated_at\": 1788854802,\n  \"user_id\": \"demo-user\"\n}\n\n---\n[Supporting data]\n- OKF source: memories/0a9206a6e8cafe4a58359fd612fa5b4a3fec5dbd98afd13fdaec85eb6e55b656.md\n\nTags: locale",
+            "type": "context",
+            "confidence": 0.8,
+            "status": "active",
+            "tags": [
+              "locale"
+            ],
+            "created_at": "2026-09-08T08:06:42+00:00",
+            "updated_at": "2026-09-08T08:06:42+00:00",
+            "expired_at": null,
+            "expired_by": null,
+            "actor_id": "agno-demo-7981da8f3764",
+            "source": "agno",
+            "source_ref": null,
+            "agent_id": "agno-demo-7981da8f3764",
+            "score": 0.294959,
+            "provenance": "imported",
+            "namespace": "memanto_agent_agno-demo-7981da8f3764",
+            "label": "Low Relevance"
+          },
+          {
+            "id": "b0a7a5ce-1091-482d-8f03-cf873dbf7a6d",
+            "title": "Agno memory d89685daf5d1fb75",
+            "content": "## Memory\n\nThe project stores its primary data in PostgreSQL 16.\n\n## Agno source metadata\n\n{\n  \"agent_id\": \"report-assistant\",\n  \"created_at\": 1788854802,\n  \"feedback\": null,\n  \"input\": null,\n  \"memory_id\": \"storage\",\n  \"team_id\": null,\n  \"topics\": [\n    \"database\"\n  ],\n  \"updated_at\": 1788854802,\n  \"user_id\": \"demo-user\"\n}\n\n---\n[Supporting data]\n- OKF source: memories/d89685daf5d1fb753543e93d7afff013c66e636b1d54f3eb86bf7bd18a7812b2.md",
+            "text": "[CONTEXT] Agno memory d89685daf5d1fb75\n\n## Memory\n\nThe project stores its primary data in PostgreSQL 16.\n\n## Agno source metadata\n\n{\n  \"agent_id\": \"report-assistant\",\n  \"created_at\": 1788854802,\n  \"feedback\": null,\n  \"input\": null,\n  \"memory_id\": \"storage\",\n  \"team_id\": null,\n  \"topics\": [\n    \"database\"\n  ],\n  \"updated_at\": 1788854802,\n  \"user_id\": \"demo-user\"\n}\n\n---\n[Supporting data]\n- OKF source: memories/d89685daf5d1fb753543e93d7afff013c66e636b1d54f3eb86bf7bd18a7812b2.md\n\nTags: database",
+            "type": "context",
+            "confidence": 0.8,
+            "status": "active",
+            "tags": [
+              "database"
+            ],
+            "created_at": "2026-09-08T08:06:42+00:00",
+            "updated_at": "2026-09-08T08:06:42+00:00",
+            "expired_at": null,
+            "expired_by": null,
+            "actor_id": "agno-demo-7981da8f3764",
+            "source": "agno",
+            "source_ref": null,
+            "agent_id": "agno-demo-7981da8f3764",
+            "score": 0.267653,
+            "provenance": "imported",
+            "namespace": "memanto_agent_agno-demo-7981da8f3764",
+            "label": "Low Relevance"
+          }
+        ],
+        "count": 3
+      }
+    },
+    {
+      "question": "What primary database does the project use?",
+      "expected": "PostgreSQL 16",
+      "source_contains_answer": true,
+      "destination_retrieved_answer": true,
+      "recall_seconds": 0.03052471600130957,
+      "response": {
+        "agent_id": "agno-demo-7981da8f3764",
+        "query": "What primary database does the project use?",
+        "memories": [
+          {
+            "id": "b0a7a5ce-1091-482d-8f03-cf873dbf7a6d",
+            "title": "Agno memory d89685daf5d1fb75",
+            "content": "## Memory\n\nThe project stores its primary data in PostgreSQL 16.\n\n## Agno source metadata\n\n{\n  \"agent_id\": \"report-assistant\",\n  \"created_at\": 1788854802,\n  \"feedback\": null,\n  \"input\": null,\n  \"memory_id\": \"storage\",\n  \"team_id\": null,\n  \"topics\": [\n    \"database\"\n  ],\n  \"updated_at\": 1788854802,\n  \"user_id\": \"demo-user\"\n}\n\n---\n[Supporting data]\n- OKF source: memories/d89685daf5d1fb753543e93d7afff013c66e636b1d54f3eb86bf7bd18a7812b2.md",
+            "text": "[CONTEXT] Agno memory d89685daf5d1fb75\n\n## Memory\n\nThe project stores its primary data in PostgreSQL 16.\n\n## Agno source metadata\n\n{\n  \"agent_id\": \"report-assistant\",\n  \"created_at\": 1788854802,\n  \"feedback\": null,\n  \"input\": null,\n  \"memory_id\": \"storage\",\n  \"team_id\": null,\n  \"topics\": [\n    \"database\"\n  ],\n  \"updated_at\": 1788854802,\n  \"user_id\": \"demo-user\"\n}\n\n---\n[Supporting data]\n- OKF source: memories/d89685daf5d1fb753543e93d7afff013c66e636b1d54f3eb86bf7bd18a7812b2.md\n\nTags: database",
+            "type": "context",
+            "confidence": 0.8,
+            "status": "active",
+            "tags": [
+              "database"
+            ],
+            "created_at": "2026-09-08T08:06:42+00:00",
+            "updated_at": "2026-09-08T08:06:42+00:00",
+            "expired_at": null,
+            "expired_by": null,
+            "actor_id": "agno-demo-7981da8f3764",
+            "source": "agno",
+            "source_ref": null,
+            "agent_id": "agno-demo-7981da8f3764",
+            "score": 0.382624,
+            "provenance": "imported",
+            "namespace": "memanto_agent_agno-demo-7981da8f3764",
+            "label": "Good Relevance"
+          },
+          {
+            "id": "1f92e427-ef56-4b4f-9000-fbbc24ed3b5c",
+            "title": "Agno memory 0a9206a6e8cafe4a",
+            "content": "## Memory\n\nThe project displays times in Asia/Kolkata and uses INR.\n\n## Agno source metadata\n\n{\n  \"agent_id\": \"report-assistant\",\n  \"created_at\": 1788854802,\n  \"feedback\": null,\n  \"input\": null,\n  \"memory_id\": \"locale\",\n  \"team_id\": null,\n  \"topics\": [\n    \"locale\"\n  ],\n  \"updated_at\": 1788854802,\n  \"user_id\": \"demo-user\"\n}\n\n---\n[Supporting data]\n- OKF source: memories/0a9206a6e8cafe4a58359fd612fa5b4a3fec5dbd98afd13fdaec85eb6e55b656.md",
+            "text": "[CONTEXT] Agno memory 0a9206a6e8cafe4a\n\n## Memory\n\nThe project displays times in Asia/Kolkata and uses INR.\n\n## Agno source metadata\n\n{\n  \"agent_id\": \"report-assistant\",\n  \"created_at\": 1788854802,\n  \"feedback\": null,\n  \"input\": null,\n  \"memory_id\": \"locale\",\n  \"team_id\": null,\n  \"topics\": [\n    \"locale\"\n  ],\n  \"updated_at\": 1788854802,\n  \"user_id\": \"demo-user\"\n}\n\n---\n[Supporting data]\n- OKF source: memories/0a9206a6e8cafe4a58359fd612fa5b4a3fec5dbd98afd13fdaec85eb6e55b656.md\n\nTags: locale",
+            "type": "context",
+            "confidence": 0.8,
+            "status": "active",
+            "tags": [
+              "locale"
+            ],
+            "created_at": "2026-09-08T08:06:42+00:00",
+            "updated_at": "2026-09-08T08:06:42+00:00",
+            "expired_at": null,
+            "expired_by": null,
+            "actor_id": "agno-demo-7981da8f3764",
+            "source": "agno",
+            "source_ref": null,
+            "agent_id": "agno-demo-7981da8f3764",
+            "score": 0.313254,
+            "provenance": "imported",
+            "namespace": "memanto_agent_agno-demo-7981da8f3764",
+            "label": "Low Relevance"
+          },
+          {
+            "id": "a8dbcfe1-c3be-41df-80f8-38d11b434448",
+            "title": "Agno memory dbb3270b08292b70",
+            "content": "## Memory\n\nSend reports as Markdown, with a CSV attachment.\n\n## Agno source metadata\n\n{\n  \"agent_id\": \"report-assistant\",\n  \"created_at\": 1788854802,\n  \"feedback\": null,\n  \"input\": null,\n  \"memory_id\": \"format\",\n  \"team_id\": null,\n  \"topics\": [\n    \"format\"\n  ],\n  \"updated_at\": 1788854802,\n  \"user_id\": \"demo-user\"\n}\n\n---\n[Supporting data]\n- OKF source: memories/dbb3270b08292b7017ddd702ed08a11c5345eb635c6a3d2494952da5fa328379.md",
+            "text": "[CONTEXT] Agno memory dbb3270b08292b70\n\n## Memory\n\nSend reports as Markdown, with a CSV attachment.\n\n## Agno source metadata\n\n{\n  \"agent_id\": \"report-assistant\",\n  \"created_at\": 1788854802,\n  \"feedback\": null,\n  \"input\": null,\n  \"memory_id\": \"format\",\n  \"team_id\": null,\n  \"topics\": [\n    \"format\"\n  ],\n  \"updated_at\": 1788854802,\n  \"user_id\": \"demo-user\"\n}\n\n---\n[Supporting data]\n- OKF source: memories/dbb3270b08292b7017ddd702ed08a11c5345eb635c6a3d2494952da5fa328379.md\n\nTags: format",
+            "type": "context",
+            "confidence": 0.8,
+            "status": "active",
+            "tags": [
+              "format"
+            ],
+            "created_at": "2026-09-08T08:06:42+00:00",
+            "updated_at": "2026-09-08T08:06:42+00:00",
+            "expired_at": null,
+            "expired_by": null,
+            "actor_id": "agno-demo-7981da8f3764",
+            "source": "agno",
+            "source_ref": null,
+            "agent_id": "agno-demo-7981da8f3764",
+            "score": 0.313254,
+            "provenance": "imported",
+            "namespace": "memanto_agent_agno-demo-7981da8f3764",
+            "label": "Low Relevance"
+          }
+        ],
+        "count": 3
+      }
+    }
+  ],
+  "generated_answer_checks": [
+    {
+      "question": "When should the weekly report be delivered?",
+      "expected_fragments": [
+        "Friday",
+        "16:00",
+        "UTC"
+      ],
+      "source_answer": "The weekly report should be delivered on Friday at 16:00 UTC.",
+      "source_pass": true,
+      "destination_answer": "The weekly report should be delivered on Friday at 16:00 UTC.",
+      "destination_pass": true,
+      "destination_response": {
+        "agent_id": "agno-demo-7981da8f3764",
+        "question": "When should the weekly report be delivered?",
+        "answer": "The weekly report should be delivered on Friday at 16:00 UTC.",
+        "sources": [],
+        "namespace": "memanto_agent_agno-demo-7981da8f3764"
+      }
+    },
+    {
+      "question": "What file formats should the report use?",
+      "expected_fragments": [
+        "Markdown",
+        "CSV"
+      ],
+      "source_answer": "The report should be sent as a Markdown file with a CSV attachment.",
+      "source_pass": true,
+      "destination_answer": "The report should use Markdown and a CSV attachment.",
+      "destination_pass": true,
+      "destination_response": {
+        "agent_id": "agno-demo-7981da8f3764",
+        "question": "What file formats should the report use?",
+        "answer": "The report should use Markdown and a CSV attachment.",
+        "sources": [],
+        "namespace": "memanto_agent_agno-demo-7981da8f3764"
+      }
+    },
+    {
+      "question": "What timezone does the project display?",
+      "expected_fragments": [
+        "Asia/Kolkata"
+      ],
+      "source_answer": "The project displays times in Asia/Kolkata.",
+      "source_pass": true,
+      "destination_answer": "Asia/Kolkata.",
+      "destination_pass": true,
+      "destination_response": {
+        "agent_id": "agno-demo-7981da8f3764",
+        "question": "What timezone does the project display?",
+        "answer": "Asia/Kolkata.",
+        "sources": [],
+        "namespace": "memanto_agent_agno-demo-7981da8f3764"
+      }
+    },
+    {
+      "question": "What primary database does the project use?",
+      "expected_fragments": [
+        "PostgreSQL",
+        "16"
+      ],
+      "source_answer": "The project stores its primary data in PostgreSQL 16.",
+      "source_pass": true,
+      "destination_answer": "The project stores its primary data in PostgreSQL 16.",
+      "destination_pass": true,
+      "destination_response": {
+        "agent_id": "agno-demo-7981da8f3764",
+        "question": "What primary database does the project use?",
+        "answer": "The project stores its primary data in PostgreSQL 16.",
+        "sources": [],
+        "namespace": "memanto_agent_agno-demo-7981da8f3764"
+      }
+    }
+  ],
+  "answer_model": "qwen2.5:1.5b",
+  "destination_count_before_import": 0,
+  "live_import_verified": true,
+  "index_readiness_counts": [
+    0,
+    4
+  ],
+  "index_readiness_seconds": 0.5477459179983271,
+  "roundtrip_count": 4,
+  "roundtrip_source_text_preserved": true,
+  "savings_report": "The upstream OKF CLI has no savings report or --report option"
+}

@@ -1,0 +1,11 @@
+{
+  "source": "Agno SQLite",
+  "records": 4,
+  "mapped_memories": 4,
+  "types": {
+    "context": 4
+  },
+  "body_preserved_by_memanto_mapper": true,
+  "live_import_verified": false,
+  "savings_report": "Not supplied by memanto migrate okf"
+}

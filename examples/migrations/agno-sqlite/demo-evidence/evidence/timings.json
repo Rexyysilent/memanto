@@ -1,0 +1,55 @@
+[
+  {
+    "command": [
+      "memanto",
+      "agent",
+      "create",
+      "agno-demo-7981da8f3764",
+      "--pattern",
+      "tool"
+    ],
+    "seconds": 0.6231510109992087,
+    "returncode": 0
+  },
+  {
+    "command": [
+      "memanto",
+      "migrate",
+      "okf",
+      "/run-artifacts/7981da8f3764/input-okf",
+      "--dry-run"
+    ],
+    "seconds": 0.5276867490010773,
+    "returncode": 0
+  },
+  {
+    "command": [
+      "memanto",
+      "migrate",
+      "okf",
+      "/run-artifacts/7981da8f3764/input-okf",
+      "--agent",
+      "agno-demo-7981da8f3764"
+    ],
+    "seconds": 0.5985066630000802,
+    "returncode": 0
+  },
+  {
+    "command": [
+      "memanto",
+      "memory",
+      "export",
+      "--okf",
+      "--split",
+      "file",
+      "--agent",
+      "agno-demo-7981da8f3764",
+      "--output",
+      "/root/.memanto/on-prem/export-7981da8f3764",
+      "--limit",
+      "100"
+    ],
+    "seconds": 0.7706980230013869,
+    "returncode": 0
+  }
+]

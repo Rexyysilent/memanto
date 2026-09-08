@@ -1,0 +1,74 @@
+[
+  {
+    "question": "When should the weekly report be delivered?",
+    "expected_fragments": [
+      "Friday",
+      "16:00",
+      "UTC"
+    ],
+    "source_answer": "The weekly report should be delivered on Friday at 16:00 UTC.",
+    "source_pass": true,
+    "destination_answer": "Friday at 16:00 UTC.",
+    "destination_pass": true,
+    "destination_response": {
+      "agent_id": "agno-demo-8106531d7c2b",
+      "question": "When should the weekly report be delivered?",
+      "answer": "Friday at 16:00 UTC.",
+      "sources": [],
+      "namespace": "memanto_agent_agno-demo-8106531d7c2b"
+    }
+  },
+  {
+    "question": "What file formats should the report use?",
+    "expected_fragments": [
+      "Markdown",
+      "CSV"
+    ],
+    "source_answer": "The report should be delivered as Markdown, with a CSV attachment.",
+    "source_pass": true,
+    "destination_answer": "The report should use the format Markdown.",
+    "destination_pass": false,
+    "destination_response": {
+      "agent_id": "agno-demo-8106531d7c2b",
+      "question": "What file formats should the report use?",
+      "answer": "The report should use the format Markdown.",
+      "sources": [],
+      "namespace": "memanto_agent_agno-demo-8106531d7c2b"
+    }
+  },
+  {
+    "question": "What timezone does the project display?",
+    "expected_fragments": [
+      "Asia/Kolkata"
+    ],
+    "source_answer": "Asia/Kolkata",
+    "source_pass": true,
+    "destination_answer": "Asia/Kolkata",
+    "destination_pass": true,
+    "destination_response": {
+      "agent_id": "agno-demo-8106531d7c2b",
+      "question": "What timezone does the project display?",
+      "answer": "Asia/Kolkata",
+      "sources": [],
+      "namespace": "memanto_agent_agno-demo-8106531d7c2b"
+    }
+  },
+  {
+    "question": "What primary database does the project use?",
+    "expected_fragments": [
+      "PostgreSQL",
+      "16"
+    ],
+    "source_answer": "The project stores its primary data in PostgreSQL 16.",
+    "source_pass": true,
+    "destination_answer": "The project uses PostgreSQL 16.",
+    "destination_pass": true,
+    "destination_response": {
+      "agent_id": "agno-demo-8106531d7c2b",
+      "question": "What primary database does the project use?",
+      "answer": "The project uses PostgreSQL 16.",
+      "sources": [],
+      "namespace": "memanto_agent_agno-demo-8106531d7c2b"
+    }
+  }
+]

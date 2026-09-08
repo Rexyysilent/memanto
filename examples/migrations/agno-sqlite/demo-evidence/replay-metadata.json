@@ -1,0 +1,9 @@
+{
+  "source": "demo.cast",
+  "kind": "rendered replay of captured stdout, not desktop pixel capture",
+  "pacing": "at least one quarter-second per displayed line; original idle gaps capped at 3 seconds",
+  "fps": 4,
+  "frames": 394,
+  "video_seconds": 98.5,
+  "actual_run_seconds": 41.816147
+}
