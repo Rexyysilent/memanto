@@ -108,12 +108,15 @@ filenames, and refusal to publish truncated memories.
 
 Prepared as a possible Path B entry for Memanto issue #1609 ($200 competitive
 prize, deadline September 15, 2026 at 23:59 UTC). Code and local checks alone
-are not a complete contest entry. Contributor onboarding, BountyHub registration,
-a real demo video, public showcase links, and an eligible claim are still required.
+are not a complete contest entry. Contributor onboarding and BountyHub sign-in
+are complete. The implementation is submitted as
+[draft PR #1952](https://github.com/moorcheh-ai/memanto/pull/1952).
+A qualifying demo video, public showcase links, and a registered bounty claim
+are still outstanding.
 The issue asks for an agent-answer demonstration and a savings report; the current
 upstream OKF reporting limitation should be disclosed and
-resolved before presenting the entry as fully compliant. No submission or payment
-has occurred. Codex authored and tested this example with AI assistance.
+resolved before presenting the entry as fully compliant. No contest acceptance,
+award, or payment has occurred. Codex authored and tested this example with AI assistance.
 
 The recorded four-question run passed on both sides with `qwen2.5:1.5b`. An earlier
 run with `qwen2.5:0.5b` passed all source answers and three destination answers;
